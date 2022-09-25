@@ -22,7 +22,7 @@ public:
     virtual void attach() override;
     virtual void detach() override;
 
-    void view();
+    void view() const;
 private:
     ShoppingList* subject;
 };

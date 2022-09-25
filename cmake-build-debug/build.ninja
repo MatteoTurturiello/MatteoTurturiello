@@ -100,18 +100,6 @@ build CMakeFiles/core.dir/AllListsObs.cpp.obj: CXX_COMPILER__core_Debug C$:/User
   OBJECT_DIR = CMakeFiles\core.dir
   OBJECT_FILE_DIR = CMakeFiles\core.dir
 
-build CMakeFiles/core.dir/Subject.cpp.obj: CXX_COMPILER__core_Debug C$:/Users/turtu/CLionProjects/MatteoTurturiello/Subject.cpp || cmake_object_order_depends_target_core
-  DEP_FILE = CMakeFiles\core.dir\Subject.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\core.dir
-  OBJECT_FILE_DIR = CMakeFiles\core.dir
-
-build CMakeFiles/core.dir/Observer.cpp.obj: CXX_COMPILER__core_Debug C$:/Users/turtu/CLionProjects/MatteoTurturiello/Observer.cpp || cmake_object_order_depends_target_core
-  DEP_FILE = CMakeFiles\core.dir\Observer.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\core.dir
-  OBJECT_FILE_DIR = CMakeFiles\core.dir
-
 build CMakeFiles/core.dir/ListObs.cpp.obj: CXX_COMPILER__core_Debug C$:/Users/turtu/CLionProjects/MatteoTurturiello/ListObs.cpp || cmake_object_order_depends_target_core
   DEP_FILE = CMakeFiles\core.dir\ListObs.cpp.obj.d
   FLAGS = -g -std=gnu++14
@@ -126,7 +114,7 @@ build CMakeFiles/core.dir/ListObs.cpp.obj: CXX_COMPILER__core_Debug C$:/Users/tu
 #############################################
 # Link the static library libcore.a
 
-build libcore.a: CXX_STATIC_LIBRARY_LINKER__core_Debug CMakeFiles/core.dir/Object.cpp.obj CMakeFiles/core.dir/ShoppingList.cpp.obj CMakeFiles/core.dir/AllListsObs.cpp.obj CMakeFiles/core.dir/Subject.cpp.obj CMakeFiles/core.dir/Observer.cpp.obj CMakeFiles/core.dir/ListObs.cpp.obj
+build libcore.a: CXX_STATIC_LIBRARY_LINKER__core_Debug CMakeFiles/core.dir/Object.cpp.obj CMakeFiles/core.dir/ShoppingList.cpp.obj CMakeFiles/core.dir/AllListsObs.cpp.obj CMakeFiles/core.dir/ListObs.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\core.dir
   POST_BUILD = cd .

@@ -22,15 +22,15 @@ public:
     std::list<ShoppingList> AllLists;
 
     void setSubject(ShoppingList* sl) ;
-    void saveList(ShoppingList entry);
-    void deleteList(ShoppingList erase);
+    void saveList(const ShoppingList& entry);
+    void deleteList(const ShoppingList& erase);
 
     virtual void update() override;
     virtual void attach() override;
     virtual void attach(ShoppingList* sl);
     virtual void detach() override;
 
-    void viewAllLists();
+    void viewAllLists() const;
 
 
 private:

@@ -20,7 +20,7 @@ void ListObs::detach() {
     subject->unsubscribe(this);
 
 }
-void ListObs::view() {
+void ListObs::view() const {
     std::cout << "List name: " <<std::endl << objList.name << std::endl;
     std::cout << "object | category | quantity | price" << std::endl;
     if(objList.shoppinglist.begin() != objList.shoppinglist.end())

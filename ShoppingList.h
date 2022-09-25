@@ -23,7 +23,7 @@ public:
     bool operator==(const ShoppingList& right);
     ShoppingList operator=(const ShoppingList& right);
 
-    void view();
+    void view() const;
     void setName(const std::string& name) {
         this->name = name;
     }
@@ -39,8 +39,8 @@ public:
     }
 
 
-    void add(Object item);
-    void remove(Object item);
+    void add(const Object& item);
+    void remove(const Object& item);
 
     virtual void subscribe(Observer* o) override;
     virtual void unsubscribe(Observer* o) override;

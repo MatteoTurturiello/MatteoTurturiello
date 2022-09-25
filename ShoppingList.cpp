@@ -4,7 +4,7 @@
 
 
 #include "ShoppingList.h"
-void ShoppingList::view() {
+void ShoppingList::view() const{
     std::cout << "List name: " <<std::endl << name << std::endl;
     std::cout << "object | category | quantity | price" << std::endl;
     if(shoppinglist.begin() != shoppinglist.end())
@@ -16,12 +16,12 @@ void ShoppingList::view() {
         }
 }
 
-void ShoppingList::add(Object item) {
+void ShoppingList::add(const Object& item) {
     this->shoppinglist.push_back(item);
     notify();
 }
 
-void ShoppingList::remove(Object item) {
+void ShoppingList::remove(const Object& item) {
     auto it = std::find(this->shoppinglist.begin(), this->shoppinglist.end(), item);
     if (it != this->shoppinglist.end())
         this->shoppinglist.remove(item);
