@@ -20,7 +20,13 @@ void ShoppingList::view() const{
 }
 
 void ShoppingList::add(const Object& item) {
-    this->shoppinglist.push_back(item);
+    auto it = std::find(this->shoppinglist.begin(), this->shoppinglist.end(), item);
+    if (it == this->shoppinglist.end())
+        this->shoppinglist.push_back(item);
+    else {
+        it->setQuantity(item.getQuantity());
+        it->setPrice(item.getPrice());
+    }
     notify();
 }
 
@@ -53,9 +59,12 @@ void ShoppingList::notify() {
 bool ShoppingList::operator==(const ShoppingList &right) {
     bool result = false;
     if(name == right.name) result = true;
-    /*
-
-     */
+    /*auto it = shoppinglist.begin();
+    auto itr = right.shoppinglist.begin();
+    while(result && it != shoppinglist.end() && itr != right.shoppinglist.end()) {
+        if( (it == itr) != true) result = false;
+        it++, itr++;
+    }*/
     return result;
 }
 

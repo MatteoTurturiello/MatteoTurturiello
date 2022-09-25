@@ -6,6 +6,6 @@
 
 bool Object::operator==(const Object &right) {
     bool result = false;
-    if(name == right.name && category == right.category && q == right.q && price == right.price) result = true;
+    if(name == right.name && category == right.category) result = true;
     return result;
 }

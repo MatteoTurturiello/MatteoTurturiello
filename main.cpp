@@ -13,6 +13,7 @@ int main() {
     list1.add(o1);
     o1.set_isBought(true);
     list1.setObjectsBought(o1);
+    list1.add(o1);
 
     list1.remove(o1);
 

@@ -38,6 +38,12 @@ public:
     void set_isBought(const bool& isBought) {
         this->isBought = isBought;
     }
+    void setQuantity(int q) {
+        this->q += q;
+    }
+    void setPrice(float p) {
+        this->price += p;
+    }
     ~Object() = default;
 
     Object(const std::string& name, const std::string& category, int q, float price, bool isBought = false) : name(name), category(category), q(q), price(price), isBought(isBought) {}
