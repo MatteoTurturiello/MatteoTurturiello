@@ -32,6 +32,8 @@ public:
 
     void add(const Object& item);
     void remove(const Object& item);
+    void countObjects() const;
+    void setObjectsBought(const Object& o);
 
     virtual void subscribe(Observer* o) override;
     virtual void unsubscribe(Observer* o) override;

@@ -6,13 +6,16 @@
 #include "ShoppingList.h"
 void ShoppingList::view() const{
     std::cout << "List name: " <<std::endl << name << std::endl;
-    std::cout << "object | category | quantity | price" << std::endl;
-    if(shoppinglist.begin() != shoppinglist.end())
+    countObjects();
+    std::cout << "object | category | quantity | price | is bought" << std::endl;
         for(auto object : shoppinglist) {
             std::cout << object.getName() << " ";
             std::cout << object.getCategory()<< " ";
             std::cout << object.getQuantity() << " ";
-            std::cout << object.getPrice() << " " << std::endl;
+            std::cout << object.getPrice() << " ";
+            if(object.get_isBought())
+                std::cout << " Yes " << std::endl;
+            else std::cout << " No " << std::endl;
         }
 }
 
@@ -64,6 +67,24 @@ ShoppingList ShoppingList::operator=(const ShoppingList &right) {
     return newlist;
 }
 
+void ShoppingList::countObjects() const {
+    int n=0, b = 0;
+    for(auto it : shoppinglist) {
+        n++;
+        if( it.get_isBought()) b++;
+    }
+    std::cout << "Oggetti nella lista:" << n << std::endl;
+    std::cout << "Oggetti nella lista da comprare:" << n - b << std::endl;
+}
 
+void ShoppingList::setObjectsBought(const Object& o) {
+    for(auto it : shoppinglist){
+        if( it == o) {
+            shoppinglist.remove(it);
+            shoppinglist.push_back(o);
+        }
+    }
+    notify();
+}
 
 

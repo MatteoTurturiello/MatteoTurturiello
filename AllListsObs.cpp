@@ -7,7 +7,6 @@
 
 void AllListsObs::update() {
     deleteList(*subject);
-    subject->view();
     AllLists.push_back(*subject);
     viewAllLists();
 }
