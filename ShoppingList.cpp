@@ -49,7 +49,7 @@ void ShoppingList::notify() {
 
 bool ShoppingList::operator==(const ShoppingList &right) {
     bool result = false;
-    if(name == right.name && category == right.category) result = true;
+    if(name == right.name) result = true;
     /*
 
      */
@@ -59,7 +59,6 @@ bool ShoppingList::operator==(const ShoppingList &right) {
 ShoppingList ShoppingList::operator=(const ShoppingList &right) {
     ShoppingList newlist;
     newlist.name = right.name;
-    newlist.category = right.category;
     for(auto it : right.shoppinglist)
         newlist.shoppinglist.push_back(it);
     return newlist;

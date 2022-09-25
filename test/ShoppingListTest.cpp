@@ -6,7 +6,6 @@
 TEST(ShoppingList, DefaultConstructor) {
     ShoppingList sl;
     ASSERT_EQ("defaultlist", sl.getName());
-    ASSERT_EQ("All", sl.getCategory());
 }
 
 TEST(ShoppingList, AddandRemove) {

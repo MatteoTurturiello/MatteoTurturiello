@@ -8,7 +8,6 @@ class ShoppingListSuite : public ::testing::Test {
 protected:
     virtual void SetUp() {
         sl.name = "defaultlist";
-        sl.category = "All";
 
 
     }

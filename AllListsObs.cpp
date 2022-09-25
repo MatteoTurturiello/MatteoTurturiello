@@ -7,7 +7,6 @@
 
 void AllListsObs::update() {
     objList.name = subject->name;
-    objList.category = subject->category;
     deleteList(*subject);
     objList.shoppinglist = subject->shoppinglist;
     AllLists.push_back(objList);

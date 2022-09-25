@@ -13,11 +13,10 @@
 
 class ShoppingList : public Subject{
 public:
-    ShoppingList( const std::string& name = "defaultlist", const std::string& category = "All") : name(name), category(category){
+    ShoppingList( const std::string& name = "defaultlist") : name(name) {
     }
     ~ShoppingList() {}
     std::list<Object> shoppinglist;
-    std::string category;
     std::string name;
 
     bool operator==(const ShoppingList& right);
@@ -28,14 +27,8 @@ public:
         this->name = name;
     }
 
-    void setCategory(const std::string& category) {
-        this->category = category;
-    }
     std::string getName() const{
         return this->name;
-    }
-    std::string getCategory() const{
-        return this->category;
     }
 
 
