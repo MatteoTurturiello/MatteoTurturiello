@@ -17,7 +17,6 @@ public:
     }
     ~ShoppingList() {}
     std::list<Object> shoppinglist;
-    std::string name;
 
     bool operator==(const ShoppingList& right);
     ShoppingList operator=(const ShoppingList& right);
@@ -41,6 +40,7 @@ public:
 
 private:
     std::list<Observer*> observers;
+    std::string name;
 
 };
 

@@ -4,8 +4,7 @@
 
 #include "ListObs.h"
 void ListObs::update() {
-    objList.name = subject->name;
-    objList.category = subject->category;
+    objList.setName(subject->getName());
     objList.shoppinglist = subject->shoppinglist;
     view();
 
@@ -21,7 +20,7 @@ void ListObs::detach() {
 
 }
 void ListObs::view() const {
-    std::cout << "List name: " <<std::endl << objList.name << std::endl;
+    std::cout << "List name: " <<std::endl << objList.getName() << std::endl;
     std::cout << "object | category | quantity | price" << std::endl;
     if(objList.shoppinglist.begin() != objList.shoppinglist.end())
         for(auto object : objList.shoppinglist) {
