@@ -18,7 +18,7 @@ public:
     ~ShoppingList() {}
 
     bool operator==(const ShoppingList& right);
-    ShoppingList operator=(const ShoppingList& right);
+
 
     void view() const;
     void setName(const std::string& name) {

@@ -68,13 +68,6 @@ bool ShoppingList::operator==(const ShoppingList &right) {
     return result;
 }
 
-ShoppingList ShoppingList::operator=(const ShoppingList &right) {
-    ShoppingList newlist;
-    newlist.name = right.name;
-    for(auto it : right.shoppinglist)
-        newlist.shoppinglist.push_back(it);
-    return newlist;
-}
 
 void ShoppingList::countObjectsBought() const {
     int n=0, b = 0;
