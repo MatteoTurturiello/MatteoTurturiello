@@ -17,12 +17,10 @@ public:
     ~ListObs() {
         detach();
     }
-    ShoppingList objList;
     virtual void update() override;
     virtual void attach() override;
     virtual void detach() override;
 
-    void view() const;
 private:
     ShoppingList* subject;
 };

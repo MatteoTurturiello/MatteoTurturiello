@@ -18,7 +18,6 @@ public:
         for(auto it : AllLists)
         detach();
     }
-    ShoppingList objList;
     std::list<ShoppingList> AllLists;
 
     void setSubject(ShoppingList* sl) ;

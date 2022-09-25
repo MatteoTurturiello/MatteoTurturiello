@@ -6,10 +6,9 @@
 #include "ShoppingList.h"
 
 void AllListsObs::update() {
-    objList.setName(subject->getName());
     deleteList(*subject);
-    objList.shoppinglist = subject->shoppinglist;
-    AllLists.push_back(objList);
+    subject->view();
+    AllLists.push_back(*subject);
     viewAllLists();
 }
 
