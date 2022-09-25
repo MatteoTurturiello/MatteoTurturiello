@@ -17,13 +17,14 @@ protected:
 
 
 TEST_F(ShoppingListSuite, TestShoppingList) {
-Object o("Patate", "Alimentare", 7, 0.83);
-o.set_isBought(true);
-sl.add(o);
-ASSERT_TRUE(sl.shoppinglist.begin() != sl.shoppinglist.end());
-sl.remove(o);
-o.set_isBought(false);
-ASSERT_TRUE(sl.shoppinglist.begin() == sl.shoppinglist.end());
-
+    Object o1("Patate", "Alimentare", 7, 0.83);
+    Object o2("Pere", "Alimentare", 4, 0.53);
+    sl.add(o1);
+    ASSERT_EQ(sl.getObjects(), 1);
+    o1.set_isBought(true);
+    sl.setObjectsBought(o1);
+    ASSERT_TRUE(sl.getObjectsBought(o1));
+    sl.remove(o1);
+    ASSERT_EQ(sl.getObjects(), 0);
 }
 

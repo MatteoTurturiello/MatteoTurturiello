@@ -6,7 +6,7 @@
 #include "ShoppingList.h"
 void ShoppingList::view() const{
     std::cout << "List name: " <<std::endl << name << std::endl;
-    countObjects();
+    countObjectsBought();
     std::cout << "object | category | quantity | price | is bought" << std::endl;
         for(auto object : shoppinglist) {
             std::cout << object.getName() << " ";
@@ -76,7 +76,7 @@ ShoppingList ShoppingList::operator=(const ShoppingList &right) {
     return newlist;
 }
 
-void ShoppingList::countObjects() const {
+void ShoppingList::countObjectsBought() const {
     int n=0, b = 0;
     for(auto it : shoppinglist) {
         n++;
@@ -94,6 +94,14 @@ void ShoppingList::setObjectsBought(const Object& o) {
         }
     }
     notify();
+}
+
+bool ShoppingList::getObjectsBought(const Object &o) const {
+    bool result = false;
+    for(auto it : shoppinglist) {
+        if (it == o) result = it.get_isBought();
+    }
+    return result;
 }
 
 

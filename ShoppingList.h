@@ -32,8 +32,15 @@ public:
 
     void add(const Object& item);
     void remove(const Object& item);
-    void countObjects() const;
+    void countObjectsBought() const;
     void setObjectsBought(const Object& o);
+    bool getObjectsBought(const Object& o) const;
+    int getObjects() const {
+        int n=0;
+        for(auto it : shoppinglist)
+            n++;
+        return n;
+    }
 
     virtual void subscribe(Observer* o) override;
     virtual void unsubscribe(Observer* o) override;
