@@ -2,7 +2,7 @@
 // Created by turtu on 18/09/2022.
 //
 
-
+#include <exception>
 #include "ShoppingList.h"
 void ShoppingList::view() const{
     std::cout << "List name: " <<std::endl << name << std::endl;
@@ -80,12 +80,14 @@ void ShoppingList::countObjectsBought() const {
 }
 
 void ShoppingList::setObjectsBought(const Object& o) {
-    for(auto it : shoppinglist){
-        if( it == o) {
-            shoppinglist.remove(it);
-            shoppinglist.push_back(o);
+
+
+    for (auto &it: shoppinglist) {
+            if (it == o) {
+                it.set_isBought(o.get_isBought());
+            }
         }
-    }
+
     notify();
 }
 

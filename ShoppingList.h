@@ -17,19 +17,15 @@ public:
     }
     ~ShoppingList() {}
 
-    bool operator==(const ShoppingList& right);
-
-
-    void view() const;
     void setName(const std::string& name) {
         this->name = name;
     }
-
     std::string getName() const{
         return this->name;
     }
 
-
+    bool operator==(const ShoppingList& right);
+    void view() const;
     void add(const Object& item);
     void remove(const Object& item);
     void countObjectsBought() const;
